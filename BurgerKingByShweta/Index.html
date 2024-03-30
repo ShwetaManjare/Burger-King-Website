@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger King</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@400;700&family=Josefin+Sans:wght@500&display=swap"
+        rel="stylesheet">
+        <style>
+            * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Dongle', sans-serif;
+    scroll-behavior: smooth;
+            }
+
+#navbar {
+    width: 100%;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    z-index: 20;
+    text-align: center;
+    background-color: #1e1919;
+    font-size: 1.5rem;
+    text-align: left;
+        
+}
+a{
+    color: white;
+    text-decoration: none;
+    margin: 20px;
+    
+    
+}
+
+
+#home {
+    width: 100%;
+}
+
+.home-left h2 {
+    padding: 7px;
+    border: 2px dotted #3d2514;
+}
+
+.home-left h3 {
+    position: relative;
+    bottom: 8px;
+    font-size: 2.2rem;
+}
+
+.divider {
+    margin: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.burger-home {
+    width: 600px;
+    padding: 20px;
+    cursor: pointer;
+    transition: 0.5s all;
+}
+
+.burger-home:hover {
+    transform: translateY(-15px);
+    
+}
+
+.bottom-container {
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.home-bottom-left {
+    background-image: url(Images/logo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 15px;
+    width: 50%;
+    height: 570px;
+    border-radius: 10px;
+    background-position: center;
+}
+
+.home-bottom-right {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 50%;
+}
+
+.home-bottom-right img {
+    margin: 25px;
+    border-radius: 10px;
+   
+   
+    
+}
+
+.center-div {
+    margin-top: 20px;
+}
+
+.center-div h1,
+p {
+    margin: 15px 0px;
+}
+
+.burger-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.burger-item {
+    padding: 10px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.burger-item img {
+    width: 240px;
+    cursor: pointer;
+    transition: 1s all;
+}
+
+.burger-item img:hover {
+    transform: scale(1.1);
+}
+
+#event-container {
+    margin-top: 20px;
+    width: 100%;
+    padding: 30px 70px;
+}
+
+.event-item {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0px 13px 23px 4px black;
+    border-radius: 20px;
+}
+
+.event-item img {
+    width: 60%;
+    border-radius: 13px;
+}
+
+.event-content {
+    margin: 0px 20px;
+}
+
+.event-para {
+    padding: 2px -2px;
+    line-height: 30px;
+    text-align: left;
+    font-size: 20px;
+}
+
+#burger-footer {
+    width: 100%;
+    padding: 25px;
+}
+
+.footer-bg {
+    height: 100%;
+    width: 100%;
+    background-image: url('Images/footerBg.jpg');
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px 50px;
+}
+
+.left-footer {
+    margin: 30px;
+}
+
+.right-footer {
+    margin-top: 30px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.left-footer .color-white {
+    padding-right: 100px;
+}
+
+.left-footer img {
+    cursor: pointer;
+    width: 300px;
+}
+
+.left-footer p {
+    line-height: 30px;
+}
+
+footer {
+    background-color: #ffC045;
+    padding: 15px;
+}
+
+h1,
+h2,
+h3 {
+    color: white;
+}
+
+.color-white {
+    color: white;
+}
+
+.btn-heading {
+    color: black;
+    background-color: #ffC045;
+    padding: 5px 15px;
+    display: block;
+    width: 18%;
+    margin: 0 auto;
+}
+
+.center {
+    text-align: center;
+}
+
+.h-primary {
+    font-size: 5rem;
+    line-height: 111px;
+    cursor: pointer;
+}
+
+.color-primary {
+    color: #3d2514;
+
+}
+
+.h-secondary {
+    font-size: 1.4rem;
+}
+
+.normal-hading {
+    font-size: 2rem;
+}
+
+.order-btn {
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 7px 18px;
+    border-radius: 15px;
+    border: 2px solid white;
+    background-color: #bf2222;
+}
+
+.order-btn:hover {
+    background-color: white;
+    border: 2px solid #bf2222;
+    border-radius: 15px;
+    color: #bf2222;
+}
+
+.burger-item p {
+    font-size: 1.4rem;
+    padding: 0px 50px;
+}
+
+.para-font,
+.p {
+    font-size: 1.5rem;
+}
+
+.center-heading,
+.burger-heading {
+    font-size: 2rem;
+}
+
+.left-footer .color-white {
+    padding: 0px;
+}
+
+.right-footer {
+    margin-right: 0px;
+}
+
+@media screen and (max-width:900px) {
+    .bottom-container {
+        flex-direction: column;
+    }
+
+    .home-bottom-left {
+        height: 420px;
+        width: 90%;
+    }
+
+    .event-item {
+        flex-direction: column;
+    }
+
+    .btn-heading {
+        width: 30%;
+    }
+
+    .event-content .event-para,
+    h2 {
+        text-align: center;
+    }
+
+    .footer-bg {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .burger-container {
+        flex-direction: column;
+    }
+
+    .one {
+        position: relative;
+        border: 2px solid #3d2514;
+        border-radius: 8px;
+        width: 60%;
+        margin: 2px;
+    }
+
+    .one::after {
+        content: '';
+        position: absolute;
+        top: 4px;
+        left: -2px;
+        width: 100%;
+        border: 2px solid #3d2514;
+        border-radius: 8px;
+    }
+
+    .one::before {
+        content: '';
+        position: absolute;
+        bottom: 4px;
+        left: -2px;
+        width: 100%;
+        border: 2px solid #3d2514;
+        border-radius: 8px;
+    }
+
+}
+
+
+@media screen and (max-width:702px) {
+    .divider {
+        flex-direction: column;
+    }
+
+    .home-bottom {
+        margin-top: 15%;
+    }
+
+    #home::before {
+        height: 90%;
+    }
+
+    .home-bottom-right img {
+        padding: 20px;
+        margin: 0px auto;
+        width: 90%;
+    }
+
+    #event-container {
+        padding: 14px 23px;
+    }
+
+    .event-content {
+        margin: 0px;
+    }
+
+    .burger-home {
+        width: 70%;
+    }
+
+    .h-primary {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .h-secondary {
+        text-align: center;
+    }
+
+    .left-footer .color-white {
+        padding: 2px 25px;
+    }
+
+    .right-footer {
+        font-size: 16px;
+    }
+}
+        </style>
+</head>
+<body>
+    <!-- Navbar Starts from Here -->
+    <nav id="navbar">
+        <a href="./public/about.html"> About</a> 
+    <a href="./public/contact.html">Contact</a>
+    <a href="public/dealer.html">Details</a>
+    <a href="public/FeedbackForm.html">Feedback</a>
+
+    
+    </nav>
+
+    <!-- Home Section Starts from Here -->
+    <section id="home">
+        <div class="divider">
+            <div class="home-left">
+                <h2 class="h-secondary color-primary">IT IS A GOOD TIME FOR THE TASTE OF BURGERS</h2>
+                <h1 class="h-primary color-primary">BURGER King </h1>
+                <h3 class="h-secondary color-primary">- By Shweta Manjare</h3>
+            </div>
+            <img class="burger-home" src="Images/Flex.PNG" alt="flex">
+        </div>
+    </section>
+
+    <!-- Main Section Starts from Here -->
+    <section id="main" class="home-bottom">
+        <div class="bottom-container">
+            <div class="home-bottom-left"></div>
+            <div class="home-bottom-right">
+                <img src="Images/img1.PNG" alt="">
+                <img src="Images/img2.PNG" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- Center Section Starts from Here -->
+    <section class="center-div" id="food">
+        <h2 class="h-secondary center btn-heading">ALWAYS TESTY BURGERS</h2>
+        <h1 class="center color-primary center-heading">CHOOSE & ENJOY</h1>
+        <p class="center para-font">
+            My heart belongs to burgers<br>
+            Burgers that won't break your heart. Burger To The Rescue; Grab a bite.<br>
+             Flame-grilled perfection. Giving you that burger lovin'. Treat Yourself.<br> </p>
+        <div class="burger-container">
+            <div class="burger-item">
+                <img src="Images/burger2.png" alt="">
+                <h2 class="center color-primary burger-heading">Burger 1</h2>
+                <p class="center">Lorem ipsum dolor sit amet,<br> consectetur adipisicing elit. Repudiandae<br>
+                    architecto eos est tempore? Ipsa, totam.</p>
+                <a href="" class="order-btn">ORDER NOW</a>
+            </div>
+            <div class="burger-item">
+                <img src="Images/burger.png" alt="">
+                <h2 class="center color-primary burger-heading">Burger 2</h2>
+                <p class="center">Lorem ipsum dolor sit amet,<br> consectetur adipisicing elit. Repudiandae <br>
+                    architecto eos est tempore? Ipsa, totam.</p>
+                <a href="" class="order-btn">ORDER NOW</a>
+            </div>
+            <div class="burger-item">
+                <img src="Images/burger2.png" alt="">
+                <h2 class="center color-primary burger-heading">Burger 3</h2>
+                <p class="center">Lorem ipsum dolor sit amet,<br> consectetur adipisicing elit. Repudiandae <br>
+                    architecto eos est tempore? Ipsa, totam.</p>
+                <a href="" class="order-btn">ORDER NOW</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Section Starts from Here -->
+    <section id="event-container">
+        <div class="event-item">
+            <div class="event-content">
+                <h2 class="para-font color-primary">DISCOVER</h2>
+                <h2 class="normal-hading color-primary">Great Food Comes First</h2>
+                <p class="event-para para-font">Our restaurants are known for serving high-quality,<br> 
+                    great-tasting, and affordable food. Founded in 1954, BURGER KING® is the second<br>
+                     largest fast food hamburger chain in the world with about 18,000 restaurants operating
+                      in more than 100 countries and US territories as at June 30, 2019.<br>
+                     The original HOME OF THE WHOPPER®, our commitment to ingredients, <br>
+                     signature recipes, and end-to-end online Burger King experience for<br>
+                      millennials is what has defined our brand for more than 50 years.</p>
+            </div>
+            <img src="Images/eventBurger.jpg" alt="">
+        </div>
+    </section>
+
+    <!-- Footer Location Section Starts from Here -->
+    <section id="burger-footer">
+        <div class="footer-bg">
+            <div class="left-footer">
+                <img src="Images/footerLogo.png" alt="">
+                <p class="color-white para-font">
+                    A burger is a patty of ground beef grilled and placed between two halves of a bun. <br/> 
+                     Slices of raw onion, lettuce, bacon, mayonnaise, and other ingredients add flavor. <br/>
+                      Burgers are considered an American food but are popular around the world.  <br/>
+                    In Japan, teriyaki burgers are popular. </p>
+            </div>
+            <div class="right-footer color-white para-font">
+               From : Maharashta<br/>
+                Pune <br/>
+                G-MAIL: shwetamanjare04@gmail.com
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Starts from Here -->
+    <footer class=" center para-font">  <marquee> &copy;Burger King By Shweta 2024-25. ALL RIGHTS RESERVED </marquee></footer>
+</body>
+</html>

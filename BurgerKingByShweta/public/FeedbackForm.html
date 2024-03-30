@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback Form</title>
+    
+  </head>
+  <body>
+    <fieldset>
+     
+    <form action="/submit" method="post">
+      <h1>Feedback Form</h1>
+      <div>
+        <label for="Name">Name</label>
+        <input type="text" name="myname" id="Name" placeholder="full name" />
+      </div>
+      <br />
+      <div>
+        <label for="Email">Email</label>
+        <input type="email" name="email" id="Email" />
+      </div>
+      <br />
+      <div>
+        <label for="Mob No">Mob No</label>
+        <input type="number" name="MOb No" id="Mob No" />
+      </div>
+      <br />
+      <div>
+        <label for="Experince">Experince:</label>
+        <div>
+          <textarea
+            name="Experince"
+            id="Experince"
+            cols="30"
+            rows="10"
+            placeholder="200 words"
+          ></textarea>
+        </div>
+        <br />
+        <div>
+          <a href="http://127.0.0.1:3000/BBT_supercars/public/thankyou.html"
+            ><input type="button" value="Submit"
+          /></a>
+          <input type="reset" value="Reset Form" />
+          <a href="http://127.0.0.1:3000/BBT_supercars/index.html"
+            ><input type="button" value="Home"
+          /></a>
+        </div>
+      </div>
+    </form>
+    <br />
+   
+  </fieldset>
+  </body>
+</html>
